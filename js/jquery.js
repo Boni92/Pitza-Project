@@ -329,7 +329,7 @@ $(document).ready(function(){
     setTimeout(() => {
       $(this).css({
 
-        "background": "url('../public/imgs/patrocinadores/pedidosya.png')",
+        "background": "black",
         "background-size": "contain",
         "background-position": "center",
         "background-repeat": "no-repeat",
