@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitza</title>
+  
+  <!--favicon-->
+  <link rel="apple-touch-icon" sizes="192x192" href="public/imgs/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/imgs/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/imgs/favicon/favicon-16x16.png">
+  <link rel="manifest" href="public/imgs/favicon/site.webmanifest">
+
+  <!--GoogleFonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!--CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/contenido.css">
+
+  <!-- Librería: SWEETALERT -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  
+
+</head>
+
+<body>
+  
+  <header>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pitza</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#categorias">Categorías</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pags/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pags/comentarios.html">Comentarios</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============PORTADA============== -->
+        <div>
+        <!-- ===PORTADA============ -->
+          <section class="imagen_inicio">
+            <div>
+              <img src="public/imgs/portada_opt.jpg" alt="">
+            </div>
+          
+            <div class="tituloppal" id="pitza">
+              <h1>Pitza</h1>
+            </div>
+
+          </section>
+
+        <!-- ===CARRITO============ -->
+          <section class="menu_inicio" id="categorias">
+
+            <!-- ============PEDIDO=========== -->
+            <div class="titulo_categoria ">
+              <h2 class="titulo_categoria_texto bajorrelieve ">~PEDIDO~</h2>
+            </div>
+            <div>
+              
+              <div id="botones">
+
+                <!-- Botón modal -->
+                <button type="button" id="boton_aceptar" class="btn btn-primary botones" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Aceptar pedido
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content aumento">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Pitza</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <div class="pedido_a_pagar">
+                          
+                          <!-- datos --> 
+                          <div class="datos">
+                            <div class="datos_nombre">
+                              <label for="input_nombre" class="texto_datos">Nombre: </label>
+                              <input id="input_nombre" type="text" placeholder="Ingrese su nombre">
+                            </div>
+                            <div class="datos_celular">
+                              <label for="input_celular" class="texto_datos">Celular o teléfono: </label>
+                              <input id="input_celular" type="text" placeholder="Ingrese su celular">
+                            </div>
+                            <div class="datos_direccion">
+                              <label for="input_direccion" class="texto_datos">Dirección: </label>
+                              <input id="input_direccion" type="text" placeholder="Ingrese su dirección">
+                            </div>
+                          </div>
+
+                          <!-- costo --> 
+                          <div class="total_costo">
+                            <div class="texto_datos fila">
+                              <div>Total: $ </div>
+                              <div id="total_costo_numero" class="texto_datos"></div>
+                            </div>
+                          </div>
+
+                          <!-- pago -->
+                          <div class="pago">
+                            <form>
+                              <div>
+                                <label for="">Efectivo </label>
+                                <input type="radio" name="formaDePago" id="efectivo" checked="checked">
+                              </div>
+                              <div>
+                                <label for="">Mercado Pago </label>
+                                <input type="radio" name="formaDePago" id="mercadoPago" >
+                              </div>
+                              
+                              
+                            </form>
+                          </div>
+
+                        </div>
+
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary botones" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary botones" id="button_confirmado">Confirmar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button id="vaciar_carrito" class="botones">Vaciar</button>               
+
+              </div>
+
+            </div>
+
+            <div id="carrito" class="bloquecito">
+              <table id="lista_carrito" class="bloque_pedido">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th id="cruz"></th>
+                  </tr>
+                </thead>
+
+                <tbody></tbody>
+
+              </table>
+
+            </div>
+          </section>
+        </div>
+
+        <div id="lista_promos">
+        <!-- ============PROMOS============== -->
+            <!-- ===Titulo ===-->
+            <div class="titulo_categoria aparecer1" >
+              <h2 class="titulo_categoria_texto bajorrelieve ">~PROMOCIONES~</h2>
+            </div>
+
+            <!-- ===Bloque con nombres ===-->
+            <div class="bloque_categorias aparecer1" >
+              <div class="row row-cols-3 contenedor">
+                <div class="cartas col">
+                  <div class="img_fondo foto1">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 1</h3>
+                      <p class="parrafo">Pizza napolitana + gaseosa 1.5 litros</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn1" class="boton_agrega texto_boton agregar boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>800</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto2">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 2</h3>
+                      <p class="parrafo">Pizza de muzzarella + cocacola 1.5 litros + porcion de faina</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn2" class="boton_agrega  texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>900</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto3">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 3</h3>
+                      <p class="parrafo">Pizza de jamon + Sprite 1.5 litros + porcion de faina</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn3" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1000</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto4">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 4</h3>
+                      <p class="parrafo">Pizza peperoni + Sprite 1.5 litros + porcion de faina</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn4" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1100</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto5">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 5</h3>
+                      <p class="parrafo">Pizza de champignones+ Cocacola 1.5 litros</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn5" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1200</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto6">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Promo 6</h3>
+                      <p class="parrafo">Pizza de muzzarella + 6 empanadas</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn6" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1300</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- ============PIZZAS============== -->
+            <!-- ===Titulo ===-->        
+            <div class="titulo_categoria aparecer2">
+              <h2 class="titulo_categoria_texto bajorrelieve ">~PIZZAS~</h2>
+            </div>
+
+            <!-- ===Bloque con nombres ===-->
+            <div class="bloque_categorias aparecer2">
+              <div class="row row-cols-3 contenedor">
+                <div class="cartas col">
+                  <div class="img_fondo foto7">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 1 - Napo</h3>
+                      <p class="parrafo">Pizza Napolitana con ingredientes mediterráneos.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn7" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1000</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto8">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 2 - Pepe</h3>
+                      <p class="parrafo">Pizza de peperonni con receta de la abuela.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn8" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1100</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto9">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 3 - Tomates</h3>
+                      <p class="parrafo">Pizza de tomates secos estacionados.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn9" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1200</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto10">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 4 - Aji</h3>
+                      <p class="parrafo">Pizza de muzarella, salame y aji verde fresco.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn10" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1300</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto11">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 5 - Cebolla</h3>
+                      <p class="parrafo">Pizza con salame y cebolla cortada fresca.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn11" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1400</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto12">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Pizza 6 - Choclo</h3>
+                      <p class="parrafo">Pizza con choclo, cebolla y quesos surtidos.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn12" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1500</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- ============EMPANADAS=========== -->
+
+            <!-- ===Titulo ===-->        
+            <div class="titulo_categoria aparecer3">
+              <h2 class="titulo_categoria_texto bajorrelieve ">~EMPANADAS~</h2>
+            </div>
+
+            <!-- ===Bloque con nombres ===-->
+            <div class="bloque_categorias aparecer3" >
+              <div class="row row-cols-3 contenedor">
+                <div class="cartas col">
+                  <div class="img_fondo foto13">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 1 - Carne</h3>
+                      <p class="parrafo">Docena de empanadas de carne.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn13" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1800</span></p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto14">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 2 - Jamon</h3>
+                      <p class="parrafo">Docena de empanadas de Jamon y Queso.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn14" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>1900</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto15">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 3 - Roque</h3>
+                      <p class="parrafo">Docena de empanadas de Roque.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn15" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>2000</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto16">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 1 - Cebo</h3>
+                      <p class="parrafo">Docena de empanadas de Cebolla.</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn16" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>2100</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto17">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 5 - Pollo</h3>
+                      <p class="parrafo">Docena de empanadas de pollo</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn17" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>2200</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartas col">
+                  <div class="img_fondo foto18">
+                    <div class="texto">
+                      <h3 class="nombre_tag">Empanadas 6 - Acelga</h3>
+                      <p class="parrafo">Docena de empanadas de Acelga</p>
+                      <div class="boton_precio">
+                        <div class="boton">
+                          <button id="btn18" class="boton_agregar texto_boton boton_agregar">Agregar</button>
+                        </div >
+                        <div class="precio">
+                          <p class="texto_precio precio_individual">$<span>2300</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>        
+
+    <!-- ============MENU PERSONALIZADO=========== -->
+        <div id="listaPersonal">
+
+            <!-- ===Titulo ===-->        
+            <div class="titulo_categoria ">
+              <h2 class="titulo_categoria_texto bajorrelieve ">~MENU PERSONALIZADO~ <button id="boton_menu_esconder">Esconder</button><button id="boton_menu_ver">Ver</button></h2>
+              
+            </div>
+
+            <!-- ===Bloque con nombres ===-->        
+            <div id="bloque_menu">
+              <div class="bloque_menu">
+
+                <div class="bloque_menu_pizzas">
+
+                  <div id="titulo_menu_pizzas">
+                    <h4>PIZZAS</h4>
+                  </div>
+
+                  <div id="contenedor_menu_pizzas">
+                    <div id="Pizza de muzzarella" class="plato_individual">
+
+                      <p id="p1">Muzzarella - $<span>500</span></p> 
+
+                      <div class="grupo_botones">
+                        <button id="btn_11" class="btn_menu_mas inc" value="1">+</button>
+                        <input type="text" name="inp" id="contador1" class="contador" value="0">
+                        </input>
+                        <button id="btn_12" class="btn_menu_menos dec">-</button>
+                      </div>
+
+                    </div>
+                    <div id="Pizza de jamon" class="plato_individual">
+
+                      <P id="p2">Jamon - $<span>600</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_21" class="btn_menu_mas inc" >+</button>
+                        <input type="text" name="inp" id="contador2" class="contador" value="0">
+                        </input>
+                        <button id="btn_22" class="btn_menu_menos dec">-</button>
+                      </div>
+                    </div>
+
+                    <div id="Pizza de fugazzeta" class="plato_individual">
+
+                      <p id="p3">Fugazzeta - $<span>700</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_31" class="btn_menu_mas inc" >+</button>
+                        <input type="text" name="inp" id="contador3" class="contador" value="0">
+                        </input>
+                        <button id="btn_32" class="btn_menu_menos dec">-</button>
+                      </div>   
+                    </div>
+
+                    <div id="Pizza de morron" class="plato_individual">
+
+                      <p id="p4">Morron - $<span>800</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_41" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador4" class="contador" value="0">
+                        </input>
+                        <button id="btn_42" class="btn_menu_menos dec">-</button>
+                      </div>
+
+                    </div>
+
+                    <div id="Pizza de napolitana" class="plato_individual">
+
+                      <p id="p5">Napolitana - $<span>900</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_51" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador5" class="contador" value="0">
+                        </input>
+                        <button id="btn_52" class="btn_menu_menos dec">-</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="bloque_menu_empanadas">
+
+                  <div id="titulo_menu_empanadas">
+                    <h4>EMPANADAS</h4>
+                  </div>
+
+                  <div id="contenedor_menu_empanadas">
+
+                    <div id="Empanada de carne" class="plato_individual">
+
+                      <p id="e1">Carne - $<span>150</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_61" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador6" class="contador" value="0">
+                        </input>
+                        <button id="btn_62" class="btn_menu_menos dec">-</button>
+                      </div>      
+                    </div>
+
+                    <div id="Empanada de jyq" class="plato_individual">
+
+                      <p id="e2">Jamon y Queso - $<span>150</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_71" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador7" class="contador" value="0">
+                        </input>
+                        <button id="btn_72" class="btn_menu_menos dec">-</button>
+                      </div>
+                      
+                    </div>
+
+                    <div id="Empanada de roquefort" class="plato_individual">
+                      
+                      <p id="e3">Roquefort - $<span>150</span></p>
+                      
+                      <div class="grupo_botones">
+                        <button id="btn_81" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador8" class="contador" value="0">
+                        </input>
+                        <button id="btn_82" class="btn_menu_menos dec">-</button>
+                      </div>
+
+                    </div>
+                    
+                    <div id="Empanada de qyc" class="plato_individual">
+                      
+                      <p id="e4">Cebolla y queso - $<span>150</span></p>
+                      
+                      <div class="grupo_botones">
+                        <button id="btn_91" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador9" class="contador" value="0">
+                        </input>
+                        <button id="btn_92" class="btn_menu_menos dec">-</button>
+                      </div>   
+
+                    </div>
+
+                    <div id="Empanada de pollo" class="plato_individual">
+
+                      <p id="e5">Pollo - $<span>150</span></p>
+
+                        <div class="grupo_botones">
+                          <button id="btn_101" class="btn_menu_mas inc">+</button>
+                          <input type="text" name="inp" id="contador10" class="contador" value="0">
+                        </input>
+                          <button id="btn_102" class="btn_menu_menos dec">-</button>
+                        </div>
+
+                    </div>
+
+                    <div id="Empanada de acelga" class="plato_individual">
+                      
+                      <p id="e6">Acelga - $<span>150</span></p>
+
+                      <div class="grupo_botones">
+                        <button id="btn_111" class="btn_menu_mas inc">+</button>
+                        <input type="text" name="inp" id="contador11" class="contador" value="0">
+                        </input>
+                        <button id="btn_112" class="btn_menu_menos dec">-</button>
+                      </div>   
+
+                    </div>
+                    
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="aceptado">
+                <button class="button_aceptado">
+                  <p >Agregar al pedido</p>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- ===Botones ===-->                    
+            <div id="datos">
+              <button id="boton_dato">Dato del mes</button>
+            </div>
+            
+        </div>
+
+    <!-- ============PATROCINADORES=========== -->
+
+        <!-- ===Titulo ===-->        
+        <div class="titulo_categoria ">
+          <h2 class="titulo_categoria_texto bajorrelieve ">~PATROCINADORES~</h2>
+        </div>
+
+        <!-- ===Bloque con nombres ===-->        
+        <div id="bloque_carteles">
+          <div class="cartel">
+            <img id="mano" src="public/imgs/patrocinadores/mano.jpg" alt="mano" style="height: 4vw;">
+            <p id="cartel_p" class="bajorrelieve">Doble click!</p>
+          </div>
+        </div>
+            
+
+      <!-- ============ USUARIOS - AJAX=========== -->
+
+        <div class="usuarios">
+
+          <!-- ===Titulo ===-->        
+          <div class="titulo_categoria ">
+            <h2 class="titulo_categoria_texto bajorrelieve ">~NUESTRA COMUNIDAD~</h2>
+          </div>
+
+          <!-- ===Bloque con usuarios nuevos ===-->        
+          <form id="usuarios_nuevos">
+            <input type="text" id="nombre_ser_parte" placeholder="Nombre" required>
+            <input type="text" id="profesion_ser_parte" placeholder="Profesión" required >
+            <br>
+            <button id="btn_ser_parte">Quiero ser parte!</button>
+          </form>
+          <br>
+
+          <!-- ===Bloque con usuarios nuevos ===-->        
+          <div id="usuarios_viejos">
+            <button id="btn_usuarios">
+              Ver usuarios</button>
+          </div>
+
+          <!-- ===Bloque con usuarios rellenados ===-->        
+
+          <ol id="lista_usuarios">
+
+          </ol>
+          
+        </div>
+  </main>
+<hr>
+  <footer>
+    <div>
+      <div class=" sucursales_contacto">
+        
+        <div class="sucursales">
+          <p>Sucursales</p>
+          <ul>
+            <li><a href="https://goo.gl/maps/XNgiBdAjGMeR8Lgr6" target="_blank">Nuñez</a></li>
+            <li><a href="https://goo.gl/maps/epLjEintmaYTw4QW6" target="_blank">Avellaneda</a></li>
+            <li><a href="https://g.page/patagonia_20y50?share" target="_blank">La Plata</a></li>
+          </ul>
+        </div>
+        
+        <div class="contacto">
+          <p>Contacto</p>
+          <ul>
+            <li>4776-6651</li>
+            <li><a href="https://gmail.com" target="_blank">pitza@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="redes">        
+        <div class="redes">
+          <div class="fondo">
+            
+            <a href="https://whatsapp.com" target="_blank">
+              <img src="public/imgs/svg/whatsapp_opt.png" alt="">
+            </a>
+          </div>
+          
+          <div class="fondo">
+            <a href="https://www.instagram.com/" target="_blank">
+            <img src="public/imgs/svg/instagram_opt.png" alt="">
+            </a>
+          </div>
+          <div class="fondo">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="public/imgs/svg/facebook_opt.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo">
+        <div class="logo">
+          <img src="public/imgs/svg/pizza_opt.png" alt="">
+        </div>
+      </div>
+
+      <div class="copy">
+        <p>Copyright - Todos los derechos reservados</p>
+        <p>Hecho por Aki y Agora</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script src="js/objetos.js"></script>
+    
+  <script src="js/jquery.js"></script>
+
+  <script src="js/carrito.js"></script>
+
+
+</body>
+</html>

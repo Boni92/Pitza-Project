@@ -1,0 +1,859 @@
+body{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+header{
+  
+  height: 56px;
+}
+main{
+  height: auto;
+}
+.imagen_inicio{
+  
+  height: auto;
+  position: relative;
+  box-shadow: 0 2px 5px 5px black;
+}
+.imagen_inicio div img{
+  width: 100%;
+  height: auto;
+}
+.tituloppal{
+  top: 2.5vw;
+  right: 2vw;
+  position: absolute;
+  font-style: italic;
+  
+}
+#pitza{
+  display: none;
+}
+h1{
+  font-size: 9vw;
+  color:#222222;
+  text-shadow: 5vw -7vw 1vw #090102;
+  font-size: 9vw;
+  position: relative;
+  filter: blur(.2vw);
+}
+
+
+/* =============CATEGORIAS============== */
+.bloque_categorias{
+  position: relative;
+  height: auto;
+  margin: 2vw 0 5vw 0 ;
+  /* display: none; */
+}
+.titulo_categoria{
+  margin: 4vw 0 0 3vw;
+  /* display: none; */
+
+}
+.aparecer1, .aparecer2, .aparecer3{
+  opacity: 0;
+}
+.titulo_categoria_texto{
+  width: fit-content;
+  border-radius: 10px;
+  padding: 1vh 0vw;
+}
+.bajorrelieve {
+  background: #b4401d;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5),0px -1px 1px rgba(0,0,0,.3);
+  }
+.contenedor{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.cartas{
+  text-align: center;
+  height: 250px;
+  width: 200px;
+  padding: 0;
+  margin: 1vw 0 ;
+  box-shadow: 0 1vw 9px 1px grey;
+  border-radius: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.img_fondo{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.foto1{
+  background: url(../public/imgs/main_promos/promo1_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto2{
+  background: url(../public/imgs/main_promos/promo2_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto3{
+  background: url(../public/imgs/main_promos/promo3_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto4{
+  background: url(../public/imgs/main_promos/promo4_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto5{
+  background: url(../public/imgs/main_promos/promo5_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto6{
+  background: url(../public/imgs/main_promos/promo6_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto7{
+  background: url(../public/imgs/main_promos/pizza1_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto8{
+  background: url(../public/imgs/main_promos/pizza2_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto9{
+  background: url(../public/imgs/main_promos/pizza3_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto10{
+  background: url(../public/imgs/main_promos/pizza4_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto11{
+  background: url(../public/imgs/main_promos/pizza5_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto12{
+  background: url(../public/imgs/main_promos/pizza6_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto13{
+  background: url(../public/imgs/main_promos/empa1_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto14{
+  background: url(../public/imgs/main_promos/empa2_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto15{
+  background: url(../public/imgs/main_promos/empa3_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto16{
+  background: url(../public/imgs/main_promos/empa4_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto17{
+  background: url(../public/imgs/main_promos/empa5_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.foto18{
+  background: url(../public/imgs/main_promos/empa6_opt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.texto{
+  background: rgba(255, 255, 255, 0.959);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.texto h3{
+  font-size: 1.1vw;
+  margin-top: .5vw;
+}
+.texto p{
+  margin: 0 2vw 1vw 2vw;
+
+}
+.parrafo{
+  font-size: 0.7vw !important;
+  text-align: left;
+}
+.boton_agregar:hover{
+  transform: scale(1.1);
+  font-size: 60%;
+}
+.boton_precio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto_boton{
+  margin: 0vw 0 1vw 0;
+  font-size: .5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: .7vw 1vw;
+  border: solid 1px grey;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.texto_precio{
+  font-weight: bolder;
+  color: rgb(231, 85, 0);
+  font-size: 1vw !important;
+}
+#boton_personalizado{
+  display: none;
+}
+/* ===MENU============ */
+.fila_total{
+  font-weight: 800;
+  font-size: 1.5vw !important;
+}
+.cancelarPedido {
+  background-color: #9e9e9e;
+  color: #3a3a3a;
+}
+.continuarPedido {
+  background-color: #45a320;
+  color: #ffffff;
+}
+.bloquecito{
+  padding-bottom: 1vw;
+}
+#titulo_menu_pizzas h4, #titulo_menu_empanadas h4{
+  font-size: 1vw;
+  font-style: italic;
+  background-color: rgba(173, 89, 20, 0.658);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  width: 20vw;
+  text-align: center;
+  margin-bottom: 1vw;
+  padding-top: .3vw;
+}
+
+#bloque_menu{
+  background-color : rgba(255, 217, 5, 0.623);
+  background: url(../public/imgs/menu.opt.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+#imagen_pizza{
+
+  width: 15vw;
+  height: 10vw;
+  border-radius: 45px;
+  box-shadow: 0 0 18px 02px black;
+
+}
+#pizza_de_la_semana{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+#boton_menu_esconder, #boton_menu_ver, #boton_dato, #btn_usuarios, #btn_ser_parte{
+  margin: 0 1vw 0 3vw;
+  background: white;
+  padding: 4px 8px 2px 8px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 5px 1px rgb(155, 152, 152);
+  font-size: 1vw !important;
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+  
+}
+#boton_menu_ver{
+  
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin: 0;
+
+}
+#boton_menu_esconder:hover{
+  transform: scale(1.1);
+}
+#boton_menu_ver:hover{
+  transform: scale(1.1);
+}
+#boton_dato:hover{
+  transform: scale(1.1);
+}
+#btn_ser_parte:hover{
+  transform: scale(1.1);
+}
+#btn_usuarios:hover{
+  background-color: rgb(231, 188, 71);
+  box-shadow: none;
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 20px;
+
+
+
+}
+#datos{
+  text-align: center;
+  margin-top: 1vw;
+}
+
+.bloque_menu{
+  margin-top: 210px;
+}
+.bloque_menu_empanadas, .bloque_menu_pizzas{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.bloque_menu_empanadas{
+  margin-bottom: 3vw !important;
+}
+.plato_individual {
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  color: white;
+
+  margin-bottom: .5vw;
+
+}
+.plato_individual p{
+  margin: auto;
+  font-size: 1vw;
+  
+
+}
+.grupo_botones{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  margin-left:38px;
+  height: 2vw;
+  width: auto;
+}
+.contador{
+  width: 3vw;
+  height: 100%;
+  background-color: #ffffff;
+  font-size: 1vw;
+  text-align: center;
+  border: none;
+  overflow: hidden;
+  
+}
+
+.aceptado{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  display: none;
+
+}
+.button_aceptado{
+  height: auto;
+  border: none;
+  box-shadow: 0 0 2px 2px #111111;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 10PX;
+
+}
+
+.button_aceptado p{
+  margin-bottom: 0;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.2vw;
+  font-weight: 800;
+  padding: 1vw;
+
+}
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #fd0d0d;
+  border-color: none;
+  opacity: 0.1;
+}
+.aumento{
+  width: 50vw !important;
+  text-align: center;
+
+}
+.aumento div div{
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+}
+.pago form div{
+  margin-left: 3vw;
+}
+.pago form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.texto_datos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 800;
+}
+
+/* ==============PATROCINADORES=============== */
+#bloque_carteles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartel{
+  width: 30vw;
+  height: 15vw;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,.3);   
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+.cartel img{
+  position: absolute;
+}
+.cartel p{
+  transform: translateY(45px);
+  font-style: italic;
+}
+
+/* ==============COMUNIDAD=============== */
+
+#usuarios_viejos{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#usuarios_nuevos{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;    
+}
+#lista_usuarios{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#lista_usuarios li{
+  background-color: #e4dd93;
+  width: 90%;
+  text-align: center;
+  margin: 3px 0 3px 0;
+  padding: 5px 0 5px 0;
+}
+/* ===============FOOTER=============== */
+footer div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0 1vw 0;
+}
+.sucursales_contacto{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  width: 60%;
+  text-align: center;
+}
+.sucursales ul li a, .contacto ul li a{
+  text-decoration: none;
+  color: black;
+}
+.sucursales_contacto div p{
+  font-weight: bolder;
+  font-size: 3vw;
+}
+
+.sucursales_contacto ul{
+  list-style: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+}
+.sucursales_contacto div ul li{
+  font-style: italic;
+  font-size: 1.5vw;
+
+}
+.redes{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.redes div{
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+/* ============CONTENEDOR EN JS =============*/
+.bloque_pedido{
+  width: 55vw;
+  min-width: 50vw;
+  min-height: 5vw;
+  border-radius: 20px;
+  background-color: rgba(211, 122, 21, 0.568);
+  box-shadow: 0 0px 5px 1px rgb(194, 194, 194);
+  margin: 0 1vw 0 1vw;
+  position: relative;
+}
+.bloque_pedido thead tr th{
+  padding: 1vh;
+  font-size: 1.1vw;
+  text-align: center;
+  width: 20vw;
+
+
+}
+.bloque_pedido tbody tr td{
+  padding: 0.5vh 1vw 0.5vw 1vw;
+  font-size: 1.1vw;
+  text-align: center;
+  width: 20vw;
+}
+.bloque_pedido tbody{
+  height: auto;
+}
+.botones{
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(211, 122, 21, 0.5);
+  margin: 1vw 0 1vw 1vw;
+  padding: 1vw 2vw;
+  font-size: 1.5vw;
+}
+.botones:hover{
+  transform: scale(1.05) !important;
+  background-color: rgba(211, 122, 21, 0.5) !important;
+}
+.botones2{
+  border-radius: 5px;
+}
+#cruz{
+  width: 5vw;
+
+}
+.cruz{
+  width: 5vw !important;
+
+}
+.div_cruz{
+  width: 25px;
+  height: 25px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.borrar_seleccion, .borrar_seleccion2{
+  text-decoration: none;
+  color: rgb(197, 7, 7);
+  font-weight: 800;
+  font-size: 1vw;
+  
+}
+.div_cruz:hover{
+  background-color: rgb(180, 18, 18) !important;
+}
+.div_cruz:hover .borrar_seleccion, .div_cruz:hover .borrar_seleccion2{
+  color: rgb(246, 246, 246);
+
+}
+/* ==============NOSOTROS=============== */
+
+#pag_nosotros{
+  background: lemonchiffon;
+
+}
+#nosotros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+
+}
+.titulo_nosotros{
+  margin: 2vw;
+
+}
+.textos_nosotros{
+  width: 70vw;
+  height: auto;
+  border-radius: 2vw;
+  box-shadow: 0 0vw 15vw 1vw rgba(255, 253, 253, 0.507);
+  background: rgba(230, 165, 45, 0.815);
+  padding: 2vw;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1.5vw;
+  word-spacing: 0.1vw;
+  line-height: 3vw;
+}
+
+/* ==============COMENTARIOS=============== */
+
+#pag_comentarios{
+  background: lemonchiffon;
+  
+}
+#comentarios{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+
+}
+.titulo_comentarios{
+  margin: 2vw;
+
+}
+.textos_comentarios{
+  width: 70vw;
+  height: auto;
+  border-radius: 2vw;
+  box-shadow: 0 0vw 15vw 1vw rgba(255, 253, 253, 0.507);
+  background: rgba(230, 165, 45, 0.815);
+  padding: 2vw;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1vw;
+  word-spacing: 0.1vw;
+  line-height: 3vw;
+}
+.texto_comentarios1{
+  font-size: 1.5vw;
+}
+.bloque_comentarios{
+  margin: 0;
+  
+}
+#boton_button{
+  border: none;
+  border-radius: .3vw;
+  background: white;
+  font-weight: 700;
+}
+#comentario_ind{
+  border: none;
+  border-radius: .3vw;
+  background: white;
+  font-weight: 500;
+
+  margin: 0 0 1vw 0;
+  padding: 0 1vw 0 1vw;
+  width: 100%;
+  height: auto;
+}
+.parrafo_comentario{
+  background: rgb(255, 255, 255);
+  border-radius: 1vw;
+  padding: 1vw 2vw 1vw 1.5vw;
+  font-weight: 500;
+  font-style: italic;
+  color: #000;
+
+  overflow-wrap: break-word;
+  line-height: 2.3vw;
+  margin-top: 3vw;
+  
+}
+
+
+
+
+
+/* ==============MEDIA QUERY============ */
+@media only screen and (max-width: 480px) {
+  .texto h3{
+    font-size: 3vw;
+  }
+  .parrafo, .texto_boton, .texto_precio{
+    font-size: 2.5vw !important;
+    text-align: center;
+  }
+  .bloque_pedido div{
+    font-size: 3vw;
+    padding: 2vw;
+  }
+  #titulo_menu_pizzas h4, #titulo_menu_empanadas h4{
+    font-size: 2vw;
+    font-style: italic;
+    background-color: rgba(173, 89, 20, 0.658);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    width: 30vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    padding-top: .3vw;
+  }
+  .bloque_menu{
+    transform: translateY(-80px);
+  }
+  .aceptado{
+    transform: translateY(-80px);
+
+  }
+  .cartel img{
+    transform: scale(0.9);
+  }
+  #cartel_p{
+    font-size: 3vw;
+    transform: translateY(30px);
+  }
+  #usuarios_nuevos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+  }
+  #btn_ser_parte{
+    font-size: 6vw;
+  }
+  .bloque_pedido thead tr th{
+    font-size: 2.5vw !important;
+
+
+  }
+  .bloque_pedido tbody tr td{
+    font-size: 2.5vw !important;
+
+  }
+  
+  .div_cruz {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: rgb(180, 33, 33);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  
+  }
+  .borrar_seleccion{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 2vw;
+    
+  }
+
+  /* ========SECCION COMENTARIOS */
+
+  .textos_comentarios, .texto_comentarios1{
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .cartel img{
+    transform: scale(.4);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .parrafo{
+    font-size: 1.5vw !important;
+  }
+  .texto h3{
+    font-size: 1.8vw;
+  }
+  #titulo_menu_pizzas h4, #titulo_menu_empanadas h4{
+    font-size: 2vw;
+    font-style: italic;
+    background-color: rgba(173, 89, 20, 0.658);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    width: 30vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    padding-top: .3vw;
+  }
+  .cartel img{
+    transform: scale(.2);
+  }
+  .cartel p{
+    font-size: 3vw;
+    transform: none;
+    transform: translateY(50px);
+  }
+}
+
